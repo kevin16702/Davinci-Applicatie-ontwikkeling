@@ -3,8 +3,14 @@
 const small = 5;
 const medium = 7;
 const large = 9;
-var aantalkl = prompt('Hoeveel small pizzas wil je');
+var aantalkl = prompt('Hoeveel kleine pizzas wil je');
+var totkl = aantalkl * small;
+document.write('<br>' + aantalkl + ' kleine pizzas : ' + totkl + ' euro' );
 var aantalmed = prompt('Hoeveel medium pizzas wil je');
+var totmed = aantalmed * medium;
+document.write('<br>' + aantalmed + ' medium pizzas : ' + totmed + ' euro');
 var aantalgrt = prompt('Hoeveel grote pizzas wil je');
-var Totaalprijs = (small * parseInt(aantalkl)) + (medium * parseInt(aantalmed)) + (large * parseInt(aantalgrt));
-alert(parseInt(Totaalprijs + 'dit is het te betalen bedrag'))
+var totgrt = aantalgrt * large;
+document.write('<br>' + aantalgrt + ' large pizzas : ' + totgrt + ' euro');
+var Totaalprijs = totkl + totmed + totgrt;
+document.write('<br> totaal : ' + Totaalprijs + ' euro');
