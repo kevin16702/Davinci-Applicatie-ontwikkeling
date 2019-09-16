@@ -1,0 +1,35 @@
+body {
+	background-color:lightyellow;
+}
+
+img.foto {
+	float: right;
+	margin-left:20px
+}
+
+h1 {
+	color: black;
+	font-size:22px;
+}
+
+h2 {	
+	color: black;
+	font-size:22px;
+}
+
+h3 {
+	color: black;
+	font-size:22px;
+}
+
+h4 {
+	color: black;
+	font-size:22px;
+}
+
+h5 {
+	color: black;
+	font-size:22px;
+}
+
+
