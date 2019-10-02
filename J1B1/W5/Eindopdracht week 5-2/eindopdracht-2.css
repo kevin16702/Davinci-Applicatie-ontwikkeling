@@ -1,0 +1,52 @@
+body.background{
+    background-image: url("header_bg.jpg");
+    font-family: "roboto", sans-serif;
+    color: rgba(255,255,255,0.8);
+    text-align:center;
+    margin: 0 auto;
+    background-position:center;
+    background-size:cover;
+    position: relative;
+}
+img.logo{
+    display:block;
+    margin: 0 auto;
+    padding-top: 250px;
+}
+
+a.bar{
+    display:inline-block;
+    font-family: "roboto", sans-serif;
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    padding-top: 100px;
+    padding-left: 50px;
+    padding-right: 50px;
+    letter-spacing: 2px;
+    transition: all 0.4s ease;
+}
+a.bar:hover{
+    color: grey;
+}
+div.icon-bar{
+    width:100%;
+    overflow:auto;
+    position:absolute;
+    top:0;
+    background-color:white;
+}
+.icon-bar a{
+    float:right;
+    right: 100px;
+    width:3%;
+    background-color:lightgrey;
+    padding-bottom: 12px;
+    padding-top: 12px;
+    margin-right:2px;
+}
+.icons{
+    margin-right: 50px;
+}
+.middle{
+    margin-bottom:100px;
+}

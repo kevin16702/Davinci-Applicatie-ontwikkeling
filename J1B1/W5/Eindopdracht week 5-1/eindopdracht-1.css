@@ -1,0 +1,44 @@
+.default{
+    font-family: "roboto", sans-serif    
+}
+#head1{
+    line-height: 36px;
+}
+#text1{
+    line-height: 32px;
+    margin-bottom: 40px
+}
+hr.thin{
+    margin-left:auto;
+    margin-right:auto;
+    height:1px;
+    width: 100%;
+    border: 0;
+    background-color: lightslategray;
+}
+div#align{
+    margin: 0 auto;
+    padding-left:15%;
+    padding-right:15% 
+}
+li{
+    padding-bottom: 20px;
+}
+div#tip{
+    background-color: #def6ed;
+    padding: 20px;
+    border-radius: 10px;
+}
+.img{
+    margin-bottom: 40px;
+}
+span{
+    font-weight: bold;
+}
+a.link{
+    background-color: lightblue;
+    padding: 15px;
+    margin: 15px;
+    border-radius: 10px;
+    font-family: "roboto", sans-serif    
+}
