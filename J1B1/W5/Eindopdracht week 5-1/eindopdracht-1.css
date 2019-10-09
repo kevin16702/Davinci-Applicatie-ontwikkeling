@@ -40,5 +40,6 @@ a.link{
     padding: 15px;
     margin: 15px;
     border-radius: 10px;
-    font-family: "roboto", sans-serif    
+    font-family: "roboto", sans-serif    ;
+    display: inline-block
 }
