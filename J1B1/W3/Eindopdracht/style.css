@@ -1,0 +1,44 @@
+
+body.bijbaan {
+	background-color:lightgreen;
+}
+body.wie-ben-ik {
+	background-color:lightyellow;
+}
+body.opleiding {
+	background-color:lightblue;
+}
+body.home {
+	background-color:lightgrey;
+}
+img.foto {
+	float: right;
+	margin-left:20px
+}
+h1 {
+	color: grey;
+}
+h1.tnt {
+	color: grey;
+	font-size:22px;
+}
+h1.opl {
+	color: grey;
+	font-size:22px;
+}
+h1.wbi {
+	color: grey;
+	font-size:22px;
+}
+h2 {	
+	color: grey;
+	font-size:18px;
+}
+img.lingewaal {
+	float: right;
+	margin-left:20px
+}
+img.tent {
+	float: right;
+	margin-left:20px
+}
