@@ -1,50 +1,58 @@
 var bier = 2;
 var bieraantal;
+var biereindprijs;
 var biertotaal = 0;
 var wijn = 2.5;
 var wijnaantal;
+var wijneindprijs;
 var wijntotaal = 0;
 var fris = 1.5;
 var frisaantal;
+var friseindprijs;
 var fristotaal = 0;
-var bitterballen = 0.5;
-var bitterballenaantal
-var bitterballentotaal = 0;
-var aantal;
+var bitterballengroot = 6;
+var bitterballenklein = 3;
+var bitterballengrootaantal;
+var bitterballenkleinaantal;
+var bitterballengroottotaal = 0;
+var bitterballenkleintotaal = 0;
+var bitterballengrooteindprijs
+var bitterballenkleineindprijs;
+var bitterballenorder;
 function bestellen(order) {
     if(order === "fris"){
         frisaantal = parseInt(prompt("hoeveel?"));
         fristotaal = frisaantal + fristotaal;
-        document.write("fris", " x ", frisaantal, " = € ", fris*frisaantal, "<br>");
         bestellen(prompt("Wilt u bier, fris, wijn of bitterballen bestellen"));
     }
     else if(order === "bier"){
         bieraantal = parseInt(prompt("hoeveel?"));
         biertotaal = bieraantal + biertotaal;
-        document.write("bier", " x ", bieraantal, " = € ", bier*bieraantal, "<br>");
         bestellen(prompt("Wilt u bier, fris, wijn of bitterballen bestellen"));
     }
     else if(order === "wijn"){
         wijnaantal = parseInt(prompt("hoeveel?"));
         wijntotaal = wijnaantal + wijntotaal;
-        document.write("wijn", " x ", wijnaantal, "= € ", wijn*wijnaantal, "<br>")
         bestellen(prompt("Wilt u bier, fris, wijn of bitterballen bestellen"));
     }
     else if(order === "bitterballen"){
-        bitterballenaantal = parseInt(prompt("hoeveel?", "6 of 12"));
-        if(bitterballenaantal = "6"){
-            bitterballentotaal = 12 + bitterballentotaal;
-            document.write("1 kleine portie bitterballen = €6 <br>");
+        bitterballenorder = prompt("groot of klein");
+        if(bitterballenorder === "groot"){
+            bitterballengrootaantal = parseInt(prompt("hoeveel?"));
+            bitterballengroottotaal = bitterballengroottotaal + bitterballengrootaantal; 
             bestellen(prompt("Wilt u bier, fris, wijn of bitterballen bestellen"));
         }
-        else if(bitterballenaantal = "12"){
-            bitterballentotaal = 6 + bitterballentotaal;
-            document.write("1 grote portie bitterballen = €3");
+        else if(bitterballenorder === "klein"){
+            bitterballenkleinaantal = parseInt(prompt("hoeveel?"));
+            bitterballenkleintotaal = bitterballenkleintotaal + bitterballenkleinaantal;
+            bestellen(prompt("Wilt u bier, fris, wijn of bitterballen bestellen"));
+        }
+        else{
             bestellen(prompt("Wilt u bier, fris, wijn of bitterballen bestellen"));
         }
     }
     else if(order === "stop"){
-        document.write("<br>")
+        document.write("<br>");
         uitrekenen();
     }
     else{
@@ -53,25 +61,32 @@ function bestellen(order) {
     }
 }
 function uitrekenen() {
-    fristotaal = fristotaal * fris;
-    biertotaal = biertotaal * bier;
-    wijntotaal = wijntotaal * wijn;
-    bitterballentotaal = bitterballentotaal * bitterballen;
+    friseindprijs = fristotaal * fris;
+    biereindprijs = biertotaal * bier;
+    wijneindprijs = wijntotaal * wijn;
+    bitterballengrooteindprijs = bitterballengroottotaal * bitterballengroot;
+    bitterballenkleineindprijs = bitterballenkleintotaal * bitterballenklein;
+    
     if (frisaantal > 0){
-        document.write("fris x ",frisaantal, " = € ", fristotaal, "<br>");
+        document.write("fris x ",fristotaal, " = € ", friseindprijs, "<br>");
     }
     else{}   
     if (bieraantal > 0){
-        document.write("bier x ", bieraantal, " = € ", biertotaal, "<br>")
+        document.write("bier x ", biertotaal, " = € ", biereindprijs, "<br>")
     }
     else{}
     if (wijnaantal > 0){
-        document.write("wijn x ", wijnaantal, " = € ", wijntotaal, "<br>")
+        document.write("wijn x ", wijntotaal, " = € ", wijneindprijs, "<br>")
     } 
     else{}
-    if (bitterballenaantal > 0){
-        document.write("bitterballen = € ", bitterballentotaal, "<br>")
+    if (bitterballenkleinaantal > 0){
+        document.write(bitterballenkleintotaal, "x kleine schaal = € ", bitterballenkleineindprijs, "<br>")
     }
-    document.write("totaal = € ",wijntotaal+fristotaal+biertotaal+bitterballentotaal)
+    else{}
+    if (bitterballengrootaantal > 0){
+        document.write(bitterballengroottotaal, "x grote schaal = € ", bitterballengrooteindprijs, "<br>")
+    }
+    else{}
+    document.write("<br> totaal = € ",wijneindprijs+friseindprijs+biereindprijs+bitterballenkleineindprijs+bitterballengrooteindprijs)
 }
 bestellen(prompt("Wilt u bier, fris, wijn of bitterballen bestellen"));

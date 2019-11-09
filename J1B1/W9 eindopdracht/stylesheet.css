@@ -1,0 +1,480 @@
+body{
+    font-family: "archivo";
+    margin: 0;
+}
+.grid{
+    display: inline-grid;
+    grid-template-columns: 14% 24% 24% 24% 14%;
+}
+
+.logo{
+    grid-column: 2/3;
+    grid-row: 1/1;
+    margin-left: 50px;
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+
+.menu{
+    margin-left: 25px;
+    margin-right: 25px;
+    grid-column: 2/5;
+    grid-row: 2/2;
+    height: 50px;
+    background-color: #222931;
+    background-repeat: repeat, no-repeat;
+    background-blend-mode: overlay;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.home1{
+    float: left;
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    vertical-align: middle;
+    height: 50px;
+    padding-left: 18px;
+    padding-right: 18px;
+    padding-top: 20px;
+    margin-left: 30px;
+}
+.home{
+    float: left;
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    vertical-align: middle;
+    height: 50px;
+    padding-left: 18px;
+    padding-right: 18px;
+    padding-top: 20px;
+}
+.menu a:hover{
+    background-color: #ffe718;
+}
+.header{
+    grid-column: 1/6;
+    grid-row: 2/3;
+    margin-top: 20px;
+    width: 100%;
+}
+.dropdown{
+    float:left;
+    overflow: hidden;
+}
+.dropbtn{
+    cursor: pointer;
+    padding: 15px;
+    background-color: #222931;
+    color: white;
+    border: none;
+    height: 50px;
+    font-weight: 600;
+    text-align: left;
+    width: 100px;
+    text-decoration: none;
+}
+
+.dropbtn:hover{
+    background-color: #ffe718;
+}
+
+.menu a:hover .dropdown:hover .dropbtn, .dropbn:focus{
+    background-color: #ffe718;
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    z-index: 1;
+}
+.dropdown-content a{
+    float: none;
+    background-color: #222931;
+    text-align: left;
+    display:block;
+    color: #aeb6be;
+    font-size: 16px;
+    line-height: 24px;
+    text-decoration: none;
+    padding-top: 3px;
+    padding-bottom: 2px;
+    padding-left: 5px;
+    padding-right: 70px;
+    font-weight: 500;
+}
+.dropdown-content a:hover{
+    background-color: #ffe718;
+}
+.show {
+    display: block;
+}
+
+.main{
+    grid-column: 2/5;
+    grid-row: 3/3;
+    text-align: center;
+    margin-bottom: 100px;
+}
+.yellowbanner{
+    grid-column: 1/6;
+    width: 100%;
+    grid-row: 4/4;
+    height: 150px;
+    background-color: #ffe718;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
+    display: grid;
+    margin-bottom: 50px;
+}
+
+.yellowbanner button{
+    grid-row: 2/2;
+    grid-column: 9/10;
+    width: 200px;
+    height: 50px;
+    background-color: white;
+    border: none;
+    font-size: 12px;
+    font-weight: 700;
+    margin-top: 30px;
+}
+.yellowbanner button:hover{
+    background-color: gray;
+}
+.werken{
+    grid-row: 2/2;
+    grid-column: 3/4;
+    text-align: right;
+    margin-top: 45px;
+    font-weight: 700;
+    font-size: 16px;
+}
+.oplossingen{
+    grid-column: 3/3;
+    grid-row: 2/2;
+    font-size: 34px;
+    font-weight: 700;
+    margin-top: 30px;
+}
+.footer{
+    grid-row: 5/5;
+    grid-column: 1/6;
+}
+.footer img{
+    width: 100%;
+}
+.V{
+    filter: invert(100%);
+    height: 16px;
+    position: absolute;
+    margin-left: 3px;
+}
+.yellowboxes{
+    grid-column: 2/5;
+    grid-row: 5/6;
+    margin-top: 250px;
+    display: inline-grid;
+}
+.deals{
+    grid-column: 1/2;
+    height: 120px;
+    width: 400px;
+    background-color: #ffe718;
+    margin-left: 65px;
+    overflow: hidden;
+}
+.diensten{
+    grid-column: 2/3;
+    height: 120px;
+    width: 400px;
+    background-color: #ffe718;
+}
+
+.support{
+    grid-column: 3/4;
+    height: 120px;
+    width: 400px;
+    background-color: #ffe718;
+    margin-right: 65px;
+}
+.main div{
+    display: inline-block;
+}
+
+.bannercontainer1{
+    position: relative;
+    width: 300px;
+    margin-top: 50px;
+}
+.banneroverlay1{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: 2s ease;
+    background-color: grey;
+}
+.image1{
+    width: 100%;
+    height: auto;
+    display: inline-block;
+}
+.bannertext1{
+    top: 45%;
+    position: absolute;
+    left: 10%;
+    color: white;
+    font-size: 32px;
+}
+.bannercontainer1:hover .banneroverlay1{
+    opacity: 0.9;
+}
+.bannercontainer2{
+    position: relative;
+    width: 300px;
+    margin-left: 30px;
+    margin-top: 50px;
+}
+.banneroverlay2{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: 2s ease;
+    background-color: grey;
+}
+.image2{
+    width: 100%;
+    height: auto;
+    display: inline-block;
+}
+.bannertext2{
+    top: 45%;
+    position: absolute;
+    left: 30%;
+    color: white;
+    font-size: 32px;
+}
+.bannercontainer2:hover .banneroverlay2{
+    opacity: 0.9;
+}
+.bannercontainer3{
+    position: relative;
+    width: 300px;
+    margin-left: 30px;
+    margin-top: 50px;
+}
+.banneroverlay3{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: 2s ease;
+    background-color: grey;
+}
+.image3{
+    width: 100%;
+    height: auto;
+    display: inline-block;
+}
+.bannertext3{
+    top: 45%;
+    position: absolute;
+    left: 22%;
+    color: white;
+    font-size: 32px;
+}
+.bannercontainer3:hover .banneroverlay3{
+    opacity: 0.9;
+}
+.deals i{
+    font-size: 80px;
+    line-height: 100px;
+    margin-top: 10px;
+    margin-left: 30px;
+    float: left;
+}
+
+.dealstext{
+    margin-top: 40px;
+    width: 200px;
+    float: right;
+    margin-right: 45px;
+    font-weight: 600;
+    font-size: 14px
+}
+.dealstext span{
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+.toolbox{
+    width: 80px;
+    height: 80px;
+    line-height: 100px;
+    margin-top: 20px;
+    margin-left: 30px;
+    float: left;
+}
+.dienstentext{
+    margin-top: 40px;
+    width: 200px;
+    float: right;
+    margin-right: 45px;
+    font-weight: 600;
+    font-size: 14px
+}
+.dienstentext span{
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+.envelope{
+    width: 80px;
+    height: 80px;
+    line-height: 100px;
+    margin-top: 20px;
+    margin-left: 40px;
+    float: left;
+}
+.supporttext{
+    margin-top: 40px;
+    width: 200px;
+    float: right;
+    margin-right: 45px;
+    font-weight: 600;
+    font-size: 14px
+}
+.supporttext span{
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+.support:hover{
+    background-color: #ddd6ce;
+    color: black;
+    filter: invert(100%);
+    transition: 0.5s ease;
+}
+.diensten:hover{
+    background-color: #ddd6ce;
+    color: black;
+    filter: invert(100%);
+    transition: 0.5s ease;
+}
+.deals:hover{
+    background-color: #ddd6ce;
+    color: black;
+    filter: invert(100%);
+    transition: 0.5s ease;
+}
+hr{
+    margin-top: 75px;
+    margin-bottom: 75px;
+    grid-row: 7/7;
+    grid-column: 2/5;
+    height: 1px;
+    width: 100%;
+    border: none;
+    background-color: lightgrey;
+}
+.overons span{
+    font-size:  32px;
+    font-weight: 600;
+}
+.overons{
+    font-size: 14px;
+    grid-row: 8/8;
+    grid-column: 2/4;
+    width: 60%;
+    word-spacing: 3px;
+}
+.overons div{
+    margin-top: 50px;
+    line-height: 16px;
+}
+.contact span{
+    font-size:  32px;
+    font-weight: 600;
+}
+.contact{
+    grid-column: 4/5;
+    grid-row: 8/8;
+    width: 10%;
+    line-height: 16px;
+}
+.marker{
+    width: 40px;
+    height: 40px;
+    filter: invert(0.5);
+    display: inline-block;
+    position: absolute
+}
+.contacttext{
+    margin-left: 100px;
+    width: 200px;
+    position: relative;
+    display: inline-block;
+}
+.seperator{
+    margin-top: 70px;
+}
+.mobile{
+    margin-top: 40px;
+    width: 40px;
+    height: 40px;
+    filter: invert(0.5);
+    display: inline-block;
+    position: absolute
+}
+.mobiletext{
+    margin-top: 50px;
+    margin-left: 100px;
+    width: 200px;
+    position: relative;
+    display: inline-block;
+}
+.smallenvelope{
+    margin-top: 40px;
+    width: 40px;
+    height: 40px;
+    filter: invert(0.5);
+    display: inline-block;
+    position: absolute
+}
+.setext{
+    margin-top: 50px;
+    margin-left: 100px;
+    width: 200px;
+    position: relative;
+    display: inline-block;
+}
+
+.bottom{
+    height: 50px;
+    background-color: #222931;
+    grid-row: 9/9;
+    grid-column: 1/6;
+    margin-top: 40px;
+    width: 100%;
+}
+.bottom div{
+    margin-top: 15px;
+    margin-left: 1300px;
+    color: white;
+    font-size: 20px;
+}
