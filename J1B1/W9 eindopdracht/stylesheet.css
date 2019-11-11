@@ -55,6 +55,7 @@ body{
 }
 .menu a:hover{
     background-color: #ffe718;
+    color: black;
 }
 .header{
     grid-column: 1/6;
@@ -81,6 +82,7 @@ body{
 
 .dropbtn:hover{
     background-color: #ffe718;
+    color: black;
 }
 
 .menu a:hover .dropdown:hover .dropbtn, .dropbn:focus{
