@@ -212,6 +212,7 @@ body{
     position: relative;
     width: 300px;
     margin-top: 50px;
+    text-align: center;
 }
 .banneroverlay1{
     position: absolute;
@@ -232,8 +233,8 @@ body{
 }
 .bannertext1{
     top: 45%;
-    position: absolute;
-    left: 10%;
+    position: relative;
+    text-align: center;
     color: white;
     font-size: 32px;
 }
@@ -245,6 +246,7 @@ body{
     width: 300px;
     margin-left: 30px;
     margin-top: 50px;
+    text-align: center;
 }
 .banneroverlay2{
     position: absolute;
@@ -265,8 +267,8 @@ body{
 }
 .bannertext2{
     top: 45%;
-    position: absolute;
-    left: 30%;
+    position: relative;
+    text-align: center;
     color: white;
     font-size: 32px;
 }
@@ -298,8 +300,8 @@ body{
 }
 .bannertext3{
     top: 45%;
-    position: absolute;
-    left: 22%;
+    position: relative;
+    text-align: center;
     color: white;
     font-size: 32px;
 }

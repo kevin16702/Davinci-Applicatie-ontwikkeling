@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="https://kit.fontawesome.com/4848706f6a.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Archivo&display=swap" rel="stylesheet"> 
+    <title>Document</title>
+</head>
+<body>
+    <div class="grid">
+        <img src="./img/logo.jpg" alt="logo" class="logo">
+        <div class="menu">
+            <a class="home1">HOME</a>
+            <div class="dropdown">
+                <button class="dropbtn" onclick="dropdown()">
+                 OVER ONS <img src="./img/angle-down-solid.svg" alt="angle-down-solid" class="V">
+                </button>
+                <div class="dropdown-content" id="mydropdown">
+                    <a href="#">Geschiedenis</a>
+                    <a href="#">Deals</a>
+                    <a href="diensten.html">Diensten</a>
+                </div>
+        </div> 
+            <a class="home">PORTFOLIO</a>
+            <a class="home">NIEUWS</a>
+            <a class="home">CONTACT</a>
+       </div>
+        <img src="./img/header.jpg" alt="header" class="header">
+        <div class="main">
+            <div class="bannercontainer1">
+           <img src="./img/banner-1.jpg" alt="banner1" class="image1">
+           <div class="banneroverlay1">
+               <div class="bannertext1">
+                    DIENSTEN
+               </div>
+            </div>
+        </div>
+           <div class="bannercontainer2">
+           <img src="./img/banner-2.jpg" alt="banner2">
+            <div class="banneroverlay2">
+                <div class="bannertext2">
+                    DIENSTEN
+                </div>
+            </div>
+        </div>
+        <div class="bannercontainer3">
+                <a href="diensten.html">
+       <img src="./img/banner-3.jpg" alt="banner3">
+        <div class="banneroverlay3">
+            <div class="bannertext3">
+                DIENSTEN
+            </div>
+        </div>
+    </div>
+</a>
+           </div>
+           <div class="yellowbanner">
+                 <span class="oplossingen">Wij Bouwen Oplossingen</span> 
+                 <span class="werken">Die echt werken</span>
+                 <button>Meer Weten</button>
+           </div>
+           <div class="footer">
+               <img src="./img/footer.jpg" alt="footer">
+           </div>
+           <div class="yellowboxes">
+           <div class="deals">
+            <i class="far fa-handshake"></i>
+            <div class="dealstext">
+                <span>
+                 DIENSTEN   <br>
+                </span>
+                BEKIJK ONZE DEALS
+            </div>
+           </div>
+           <a href="diensten.html">
+           <div class="diensten">
+            <img src="./img/toolbox-solid.svg" class="toolbox" alt="toolbox-solid">   
+            <div class="dienstentext">  
+                <span>
+                DIENSTEN <br>
+                </span>
+                BEKIJK ONZE DIENSTEN
+               </div>
+           </div>
+           </a>
+           <div class="support">
+               <img src="./img/envelope-regular.svg" class="envelope" alt="envelope-regular">
+               <div class="supporttext">
+                   <span>
+                    DIENSTEN <br>
+                   </span>
+                   STUUR EEN BERICHT
+               </div>
+           </div>
+        
+           </div>
+           <hr> 
+           <div class="overons">
+               <span>Over ons <br></span><div>
+               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Duis consequat accumsan magna quis pulvinar. 
+                Quisque maximus ullamcorper auctor. 
+                Phasellus nec sodales nibh, gravida rhoncus nisi.
+                 Vivamus lacinia iaculis dolor ut varius.
+                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                 Duis consequat accumsan magna quis pulvinar. 
+                 Quisque maximus ullamcorper auctor. 
+                 Phasellus nec sodales nibh, gravida rhoncus nisi.
+                  Vivamus lacinia iaculis dolor ut varius.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Duis consequat accumsan magna quis pulvinar. 
+                  Quisque maximus ullamcorper auctor. 
+                  Phasellus nec sodales nibh, gravida rhoncus nisi.
+                   Vivamus lacinia iaculis dolor ut varius.
+                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                   Duis consequat accumsan magna quis pulvinar. 
+                   Quisque maximus ullamcorper auctor. 
+                   Phasellus nec sodales nibh, gravida rhoncus nisi.
+                    Vivamus lacinia iaculis dolor ut varius.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Duis consequat accumsan magna quis pulvinar. 
+                    Quisque maximus ullamcorper auctor. 
+                    Phasellus nec sodales nibh, gravida rhoncus nisi.
+                     Vivamus lacinia iaculis dolor ut varius.
+                     </div>
+                </div>
+                <div class="contact">
+                    <span>Contact</span><div class="seperator">
+                    <img src="./img/map-marker-alt-solid.svg" alt="marker" class="marker">
+                    <div class="contacttext">
+                        Roumbutslaan 34 <br>
+                        3312 KP Dordrecht
+                    </div>
+                    <img src="./img/mobile-alt-solid.svg" alt="mobile" class="mobile">
+                    <div class="mobiletext">
+                        05671342462
+                    </div>
+                    <img src="./img/envelope-regular.svg" alt="envelope" class="smallenvelope">
+                    <div class="setext">
+                        htgdfgsfhs@gfsdg.nl
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom">
+                    <div>
+                            © Kevin Bouwmeester, 2019
+                    </div>
+                </div>
+           </div>
+        <script>
+            /* dropdown menu toggle */
+        function dropdown() {
+            document.getElementById("mydropdown").classList.toggle("show")
+        }
+
+            //close dropdown
+            windows.onclick = function(e){
+                if(!e.target.matches(".dropbtn")){
+                    var mydropdown = Document.getElementById("mydropdown");
+                    if(mydropdown.classlist.contains("show")){
+                        mydropdown.classlist.remove("show")
+                    }
+                }
+            }
+        </script>
+</body>
+</html>
