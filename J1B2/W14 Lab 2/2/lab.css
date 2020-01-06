@@ -1,0 +1,17 @@
+#container{
+    background-color: grey;
+    width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+button{
+    border: none;
+    background-color: green;
+    width: 170px;
+    height: 100px;
+    margin: 10px;
+}
+button:hover{
+    filter: brightness(70%) ;
+}
