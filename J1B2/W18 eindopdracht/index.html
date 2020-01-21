@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="HandheldFriendly" content="true">
+    <link href="stylesheet.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Archivo&display=swap" rel="stylesheet"> 
+    <script src="https://kit.fontawesome.com/4848706f6a.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="box">
+    <div id="header">
+        <div class="dropdownmenu">
+            <i class="fas fa-bars bars" id="menu1" onclick="Dropdownmenu1()"></i>
+            <div class="dd-content" id="dropdown1">
+                <ul>
+                    <li> Support</li>
+                    <li> Contact</li>
+                    <li>Dashboard</li>
+                </ul>
+            </div>
+        </div> 
+        <div class="iconmenu">
+                <i class="fas fa-phone"></i><span>(06) --- --- --</span>
+                <i class="fab fa-whatsapp"></i><span>(06) --- --- --</span>
+                <i class="far fa-clock"></i> <span>Ma - Zo: 8:00 - 22:00</span>
+                <i class="fas fa-tachometer-alt"></i><span>Dashboard</span>
+                
+            <div class="socialmedia">
+                <i class="fab fa-facebook-square"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-twitter-square"></i>    
+            </div>
+            </div>
+    </div> 
+    <div class="dropdownmenu2">
+        <i class="fas fa-bars bars" id="menu2" onclick="Dropdownmenu2()"></i>
+        <div class="dd-content" id="dropdown2">
+            <ul>
+                <li> Support</li>
+                <li> Contact</li>
+                <li>Dashboard</li>
+            </ul>
+        </div>
+    </div> 
+    <img id="vsb" src="vsb.png" alt="vsb">
+    <ul class="list">
+        <li class="menu3 bars" onclick="Dropdownmenu3()">AUTORIJBEWIJS<i class="fas fa-caret-down"></i>
+            <div class="dd-content" id="dropdown3">
+                <ul>
+                    <li> Support</li>
+                    <li> Contact</li>
+                    <li>Dashboard</li>
+                </ul>
+            </div>
+        </li>
+        <li class="menu3 bars" onclick="Dropdownmenu4()">MOTORRIJBEWIJS<i class="fas fa-caret-down"></i>
+            <div class="dd-content" id="dropdown4">
+                <ul>
+                    <li> Support</li>
+                    <li> Contact</li>
+                    <li>Dashboard</li>
+                </ul>
+            </div>
+        </li>
+        <li>THEORIELES</li>
+        <li>OPFRIS CURSUS</li>
+        <li>CONTACT</li>
+    </ul>
+    <div class="slideshow">
+        <div class="slidefade fade">
+            <img src="ih.jpg" alt="serious" id="banner">
+        </div>
+        <div class="slidefade fade">
+            <figure class="driver">
+            <img src="driver.jpg" alt="driver" class="bannerslide">
+            </figure>
+        </div>
+
+        <div class="slidefade fade">
+            <figure class="driver">
+            <img src="driver2.jpg" alt="driver" class="bannerslide">
+            </figure>
+        </div>
+        <div style="text-align:center">
+            <span class="dot1 dot" onclick="currentSlide(1)"></span>
+            <span class="dot2 dot" onclick="currentSlide(2)"></span>
+            <span class="dot3 dot" onclick="currentSlide(3)"></span>
+          </div>
+        </div>
+        <div class="row">
+        <div class="center" id="block1">
+            <h1><i class="fas fa-car-side" id="car"></i>PROEFLES</h1>
+            <hr>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ullamcorper dui eu mi volutpat, sed placerat felis sagittis. Curabitur tristique dictum libero, et interdum felis molestie vehicula. 
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ullamcorper dui eu mi volutpat, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ullamcorper dui eu mi volutpat,
+            </p>
+            <button>Gratis proefles</button>
+    </div>
+    <div class="center" id="block2">
+        <h1><i class="fas fa-map"id="map"></i>LOCATIES</h1>
+        <hr>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ullamcorper dui eu mi volutpat, sed placerat felis sagittis. Curabitur tristique dictum libero, et interdum felis molestie vehicula. 
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ullamcorper dui eu mi volutpat,
+        </p>
+    </div>
+    <div class="center" id="block3">
+        <h1><i class="fas fa-graduation-cap" id="cap"></i>RIJLESSEN</h1>
+        <hr>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ullamcorper dui eu mi volutpat, sed placerat felis sagittis. Curabitur tristique dictum libero, et interdum felis molestie vehicula. 
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ullamcorper dui eu mi volutpat,
+        </p>
+    </div>
+
+        </div> 
+           <div class="content">
+            <iframe id="video" src="https://www.youtube.com/embed/_uH9lIATVNE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+</div>
+<script>
+    var slideIndex = 1;
+showSlides(slideIndex);
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("slidefade");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+} 
+
+
+function Dropdownmenu1() {
+  document.getElementById("dropdown1").classList.toggle("show");
+}
+
+function Dropdownmenu2() {
+  document.getElementById("dropdown2").classList.toggle("show");
+}
+function Dropdownmenu3(){
+    document.getElementById("dropdown3").classList.toggle("show");   
+}
+function Dropdownmenu4(){
+    document.getElementById("dropdown4").classList.toggle("show");   
+}
+window.onclick = function(event) {
+  if (!event.target.matches('.bars')) {
+    var dropdowns2 = document.getElementsByClassName("dd-content");
+    var e;
+    for (e = 0; e < dropdowns2.length; e++) {
+      var openDropdown2 = dropdowns2[e];
+      if (openDropdown2.classList.contains('show')) {
+        openDropdown2.classList.remove('show');
+      }
+    }
+  }
+} 
+/*
+function Dropdownmenu3() {
+  document.getElementById("dropdown").classList.add("show");
+}
+window.onclick = function(event) {
+  if (!event.target.matches('.fa-bars')) {
+    var dropdowns = document.getElementsByClassName("dd-content");
+    var d;
+    for (d = 0; d < dropdowns.length; d++) {
+      var openDropdown = dropdowns[d];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+} 
+
+function Dropdownmenu4() {
+  document.getElementById("dropdown").classList.add("show");
+}
+window.onclick = function(event) {
+  if (!event.target.matches('.fa-bars')) {
+    var dropdowns = document.getElementsByClassName("dd-content");
+    var d;
+    for (d = 0; d < dropdowns.length; d++) {
+      var openDropdown = dropdowns[d];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+} */
+</script>
+</body>
+</html>
