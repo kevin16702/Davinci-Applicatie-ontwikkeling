@@ -479,6 +479,8 @@ var words = [
 	"zever",
 	"zeeen"];
 	var wordsplit = [];
+	var inputsplit = [];
+	var input;
 	var textbox = document.createElement("input");
 	var container = document.createElement("div");
 	var button = document.createElement("button");
@@ -502,8 +504,6 @@ var words = [
 		cng.className = cng.className.replace(old, newClass);
 	}
 
-
-
 	createboxes();
 	function checklength(){
 		if(textbox.value.length==word.length){
@@ -514,7 +514,6 @@ var words = [
 		}
 		return;
 	}
-	// print the letters
 function lingo(){
 	if(e<=4){
 		input = textbox.value.toLowerCase();
@@ -523,54 +522,60 @@ function lingo(){
 		var row = "boxcontainer" + turn;
 		turn++
 		count = 0;
+		wordsplit = word.split('')
+		console.log(wordsplit)
+		// childboxes//
+		
 		var childboxes = document.getElementById(row).getElementsByTagName('div');
+		inputsplit = input.split('');	
+		//-----------//
+		
+
+		// print the letters //
+
+		var goed = true;
+		var goedeLetters = 0;
+
 			for(var i=0; i<childboxes.length;i++){
 			childboxes[i].innerHTML = input[i];
-			if(input[i] == word[i]){
-				changeclass(childboxes[i],'default', 'green')
-				count++
 			}
-			else if(word.indexOf(input[i])!=-1){
-				if(sameletter === false && childboxes[word.indexOf(input[i])].className != "green"){
-					changeclass(childboxes[i], 'default', 'yellow')
+			for(var q=0; q<=4; q++){
+				if(wordsplit[q] === inputsplit[q]){
+					goedeLetters++;
+				inputsplit[q] = goed;
+				wordsplit[q] = goed;
+				console.log(childboxes[q]);
+				childboxes[q].style.backgroundImage = "none"
+				childboxes[q].style.backgroundColor = 'green';
+			}
+				else{
+					console.log(childboxes[q]);
 				}
-				else if(sameletter === true && childboxes[word.indexOf(input[i])].className == "green"){
-				}
-				else if(sameletter === true){
-					var ind = getalindexes(word, input[i])
-					if(ind.length > 1){
-						for(var l=0; l<ind.length;l++){
-							if(childboxes[ind[l]].className != "green" && childboxes[ind[l]].className != "yellow"){
-								changeclass(childboxes[i], 'default', 'yellow');
-							}
-						}
+			}
+			if(goedeLetters == 5){
+				alert("je hebt het spel gewonnen");
+				container.removeChild(button);
+			}
+			else{
+
+			for(q=0; q<=4; q++){
+				if(inputsplit[q] != goed){
+					for(r=0; r<=4; r++){
+					if(inputsplit[q] === wordsplit[r]){
+						wordsplit[r] = goed;
+						childboxes[q].style.backgroundImage = "none";
+						childboxes[q].style.backgroundColor = "yellow";
 					}
-					else if(childboxes[word.indexOf(input[i])].className1 != "green"){
-						changeclass(childboxes[i], 'default', 'yellow');
-					}
+					else{}
+				}
 				}
 			}
-			if(count === 5){
-				end();
+		}
 			}
-			else{}
 		}
-	}
-		else{
-			alert("je hebt verloren. het woord was " + word)
-	}
-}
-	var getalindexes = function getalindex(arr, val){
-		var indexes = [], i;
-		for(i = 0; i < arr.length; i++){
-			if (arr[i]=== val)
-			indexes.push(i);
-			return indexes;
-		}
-	}
+
 	var word = words[Math.floor(Math.random() * words.length)];
 	var hasDuplicates = (/([a-zA-Z]).*?\1/).test(word)
-	console.log(word);
 document.getElementById('boxcontainer0').firstElementChild.innerHTML = word[0];
 button.onclick = checklength;
 var row = "boxcontainer" + turn;
